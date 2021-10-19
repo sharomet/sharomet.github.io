@@ -6108,18 +6108,18 @@ img {
   margin-top: 1rem;
 }
 
-.sticky-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-
 .header {
+  position: fixed;
   left: 0;
   width: 100% !important;
   background-color: rgba(245, 245, 245, 0.6);
+  z-index: 100;
+}
+
+.header--sticky {
+  background-color: #f5f5f5 !important;
+  -webkit-animation: 0.3s ease-in header_down;
+          animation: 0.3s ease-in header_down;
 }
 
 .header__container {
@@ -6168,12 +6168,6 @@ img {
 
 .header__nav a:hover {
   background-color: #ededed;
-}
-
-.header-sticky .header {
-  background-color: #f5f5f5;
-  -webkit-animation: 0.3s ease-in header_down;
-          animation: 0.3s ease-in header_down;
 }
 
 @-webkit-keyframes header_down {
@@ -6229,6 +6223,35 @@ img {
 
 .footer__logo {
   display: block;
+}
+
+.footer__nav {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.footer__nav a:after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transition: width 0.3s ease-in;
+  -o-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
+  width: 0;
+}
+
+.footer__nav a {
+  display: block;
+}
+
+.footer__nav a:hover::after {
+  width: 100%;
+}
+
+.footer__nav > li ~ li {
+  margin-top: 0.5rem;
 }
 
 .section {
@@ -7340,7 +7363,7 @@ img {
   }
 
   .header__navbar {
-    display: block !important;
+    height: auto !important;
   }
 
   .hamburger {
@@ -7977,12 +8000,15 @@ img {
 
 @media (max-width: 991.98px) {
   .header__navbar {
+    -webkit-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     width: 100%;
     background-color: #f5f5f5;
-    display: none;
+    overflow: hidden;
   }
 }
 

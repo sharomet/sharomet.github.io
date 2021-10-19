@@ -1,22 +1,34 @@
-$('.header').sticky({
-  topSpacing: 0,
-  className: 'header-sticky'
-})
+window.onscroll = function () {
+  stickyHeader()
+}
+const header = document.querySelector('.header'),
+  sticky = header.offsetTop
+  navbar = document.querySelector('.header__navbar'),
+  hamburger = document.querySelector('.menu-hamburger');
 
-const $hamburger = $('.menu-hamburger')
-const $navbar = $('.header__navbar')
-$hamburger.on('click', function () {
-  if ($navbar.is(':hidden')) {
-    $hamburger.addClass('is-active')
-    $navbar.slideDown('fast')
+const stickyHeader = () =>
+  window.pageYOffset > sticky
+    ? header.classList.add('header--sticky')
+    : header.classList.remove('header--sticky')
+
+hamburger.addEventListener('click', () => {
+  if (navbar.style.height === '0px') {
+    navbar.style.height = `${navbar.scrollHeight}px`
+    hamburger.classList.add('is-active');
   } else {
-    $hamburger.removeClass('is-active')
-    $navbar.slideUp('fast')
+    navbar.style.height = `${navbar.scrollHeight}px`
+    window.getComputedStyle(navbar, null).getPropertyValue('height')
+    navbar.style.height = '0'
+    hamburger.classList.remove('is-active');
+  }
+})
+navbar.addEventListener('transitionend', () => {
+  if (navbar.style.height !== '0px') {
+    navbar.style.height = 'auto'
   }
 })
 
-let wow = new WOW({
+new WOW({
   boxClass: 'wow',
-  animateClass: 'animate__animated',
-})
-wow.init()
+  animateClass: 'animate__animated'
+}).init()
