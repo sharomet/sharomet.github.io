@@ -137,11 +137,8 @@ table {
 #slide-price .noUi-handle {
   width: 60px;
 }
-#slide-price .noUi-handle-lower {
-  right: -42px;
-}
-#slide-price .noUi-handle-upper {
-  right: -18px;
+#slide-price .noUi-handle {
+  right: -40px;
 }
 
 .noUi-connect {
@@ -151,6 +148,7 @@ table {
   background-color: #417abf;
 }
 #slide-price {
+  margin-right: 23px;
   background-color: #00e164;
 }
 
