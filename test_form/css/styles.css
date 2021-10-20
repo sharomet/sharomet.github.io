@@ -186,6 +186,7 @@ table {
 }
 .table th:first-child {
   border-top-left-radius: 8px;
+  text-align: right;
 }
 .table th:first-child,
 .table td:first-child {
