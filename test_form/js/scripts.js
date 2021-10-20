@@ -33,7 +33,7 @@ ageSlideId.noUiSlider.on('update', function (values, handle) {
 const priceSlideId = document.getElementById('slide-price');
 noUiSlider.create(priceSlideId, {
   start: [2000, 20000],
-  connect: false,
+  connect: true,
   range: {
     'min': [0],
     'max': [30000]
