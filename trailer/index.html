@@ -10,13 +10,14 @@
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="img/favicon.ico">
   <link rel="stylesheet" href="css/bundle.min.css">
-  <script src="js/lazysizes.min.js"></script>
 </head>
 
 <body><a class="skip-link" href="#primary">Skip to content</a>
   <header class="header">
     <div class="container header__container"> <a href="#" class="header__logo-container">
-        <img src="img/logo.webp" alt="Trailer" class="header__logo" width="120" height="47">
+        <picture>
+          <source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Trailer" class="header__logo" width="120" height="47">
+        </picture>
       </a>
       <div class="hamburger hamburger--emphatic menu-hamburger">
         <div class="hamburger-box">
@@ -43,7 +44,9 @@
         </div>
       </div>
     </div>
-    <img data-src="img/hero.webp" class="lazyload hero__image" alt="Trailer" width="1920" height="1282">
+    <picture>
+      <source srcset="img/hero.webp" type="image/webp"><img src="img/hero.jpg" class="hero__image" loading="lazy" alt="Trailer" width="1920" height="1282">
+    </picture>
   </section>
   <main id="primary">
     <section class="section services" aria-labelledby="servicesTitle">
@@ -96,7 +99,9 @@
           <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4 wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="30">
             <article class="news__item">
               <div class="news__image-content">
-                  <img data-src="img/new-1.webp" class="lazyload" alt="News">
+                <picture>
+                  <source srcset="img/new-1.webp" type="image/webp"><img src="img/new-1.jpg" loading="lazy" alt="News">
+                </picture>
               </div>
               <h2 class="news__title"> <a href="#"> There are many variations of passages </a> </h2>
               <p class="news__text"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature ... </p>
@@ -105,7 +110,9 @@
           <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4 wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="30" data-wow-delay="0.1s">
             <article class="news__item">
               <div class="news__image-content">
-                <img data-src="img/new-2.webp" class="lazyload" alt="News">
+                <picture>
+                  <source srcset="img/new-2.webp" type="image/webp"><img src="img/new-2.jpg" loading="lazy" alt="News">
+                </picture>
               </div>
               <h2 class="news__title"> <a href="#"> The standard chunk of Lorem Ipsum </a> </h2>
               <p class="news__text"> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text ... </p>
@@ -114,7 +121,9 @@
           <div class="col-lg-3 col-sm-6 mb-sm-0 mb-4 wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="30" data-wow-delay="0.2s">
             <article class="news__item">
               <div class="news__image-content">
-                <img data-src="img/new-3.webp" class="lazyload" alt="News">
+                <picture>
+                  <source srcset="img/new-3.webp" type="image/webp"><img src="img/new-3.jpg" loading="lazy" alt="News">
+                </picture>
               </div>
               <h2 class="news__title"> <a href="#"> It is a long established fact that a reader </a> </h2>
               <p class="news__text"> Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure ... </p>
@@ -123,7 +132,9 @@
           <div class="col-lg-3 col-sm-6 wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="30" data-wow-delay="0.3s">
             <article class="news__item">
               <div class="news__image-content">
-                <img data-src="img/new-4.webp" class="lazyload" alt="News">
+                <picture>
+                  <source srcset="img/new-4.webp" type="image/webp"><img src="img/new-4.jpg" loading="lazy" alt="News">
+                </picture>
               </div>
               <h2 class="news__title"> <a href="#"> Many desktop publishing </a> </h2>
               <p class="news__text"> All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this ... </p>
@@ -137,7 +148,9 @@
         <h2 class="section__title section__title--left wow animate__fadeInUp" id="aboutTitle" data-wow-duration="1s" data-wow-offset="30"> About </h2>
         <div class="row align-items-center gx-lg-5">
           <div class="col-lg-6 mb-lg-0 mb-3 wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="30">
-            <img data-src="img/about-img.webp" class="lazyload" alt="">
+            <picture>
+              <source srcset="img/about-img.webp" type="image/webp"><img src="img/about-img.jpg" loading="lazy" alt="">
+            </picture>
           </div>
           <div class="col-lg-6 wow animate__fadeInUp" aria-labelledby="informationTitle" data-wow-duration="1s" data-wow-offset="30" data-wow-delay="0.1s">
             <h3 id="informationTitle"> Information </h3>
@@ -152,7 +165,7 @@
         <h2 class="section__title section__title--right wow animate__fadeInUp" id="contactTitle" data-wow-duration="1s" data-wow-offset="30"> Contact Form </h2>
         <div class="row flex-md-row-reverse gx-lg-5 align-items-md-center">
           <div class="col-md-6 mb-md-0 mb-3 wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="30" data-wow-delay="0.1s">
-            <div class="ratio ratio-4x3"> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d162642.762905074!2d30.4914865!3d50.4356397!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2sKyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1635338793680!5m2!1sen!2sua" style="border:0;" allowfullscreen="" loading="lazy"></iframe> </div>
+            <div class="ratio ratio-4x3"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162675.82145613313!2d30.498352944046136!3d50.42601693146182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1635329773708!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy"></iframe> </div>
           </div>
           <div class="col-md-6 wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="30">
             <form action="#">
@@ -174,7 +187,9 @@
     <div class="container footer__container">
       <div class="row gx-lg-5">
         <div class="col-xl-2 col-lg-3 col-md-6 footer__logo-column"> <a href="#" class="footer__logo mb-3">
-            <img src="img/logo-white.webp" alt="Trailer">
+            <picture>
+              <source srcset="img/logo-white.webp" type="image/webp"><img src="img/logo-white.png" alt="Trailer">
+            </picture>
           </a>
           <p> It is a long established fact that a reader will be distracted by the readable content. </p>
         </div>
