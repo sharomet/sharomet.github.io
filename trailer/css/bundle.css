@@ -1318,13 +1318,6 @@ img {
     width: 50%;
   }
 
-  .col-sm-12 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    width: 100%;
-  }
-
   .mb-sm-0 {
     margin-bottom: 0 !important;
   }
