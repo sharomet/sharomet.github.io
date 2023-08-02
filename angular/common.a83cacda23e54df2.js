@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkangular_web=self.webpackChunkangular_web||[]).push([[592],{9836:(s,m,t)=>{t.d(m,{O:()=>p});var n=t(1571);let p=(()=>{class e{}return e.\u0275fac=function(o){return new(o||e)},e.\u0275cmp=n.Xpm({type:e,selectors:[["pos-home"]],decls:2,vars:0,template:function(o,u){1&o&&(n.TgZ(0,"p"),n._uU(1,"Home Page works!"),n.qZA())},encapsulation:2}),e})()}}]);
